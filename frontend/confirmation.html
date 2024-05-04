@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Order Confirmation</h1>
+  <p>Thank you for your order!</p>
+  <p>Total Amount: <span id="orderTotal"></span></p>
+<script>
+
+const urlParams = new URLSearchParams(window.location.search);
+const totalAmount = urlParams.get('total');
+document.getElementById('orderTotal').textContent = totalAmount;
+</script>
+</body>
+</html>

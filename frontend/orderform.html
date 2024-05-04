@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>UHSL Cafe - Online Order</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>Welcome to the UHSL<span class="off">Cafe</span></h1>
+    </div> 
+    <div id="menu">
+      <ul>
+        <li class="menuitem"><a href="cafhomepage.html">Home</a></li>
+        <li class="menuitem"><a href="#">About Us</a></li>
+        <li class="menuitem"><a href="orderform.html">Order Food</a></li>
+        <li class="menuitem"><a href="menu.html">Current Menu</a></li>
+        <li class="menuitem"><a href="ownersbiography.html">Owner's Biography</a></li>
+        <li class="menuitem"><a href="#">Contact</a></li>
+      </ul>
+    </div>  
+    <h1>Order Here :) </h1>
+    <br>
+    <button class="collapsible">Breakfast <img src="images/weather-sunrise.gif" width="120px"></button> 
+    <div class="menucontent">
+    <form method="POST" action="/order" id="orderForm1" class="order-form"></form>
+        <h3>Not available after 2pm</h3> 
+    
+        <label for="crepes">Crepes - $5.50:</label>
+        <select id="crepes" name="crepes" data-price="5.50">
+        <option value="toppings1">Toppings</option>
+          <option value="whipped cream1">Whipped Cream</option>
+          <option value="chocolate1">Chocolate Sauce</option>
+          <option value="caramel1">Caramel</option>
+          <option value="Banana1">Banana</option>
+          <option value="Berry Mix1">Berry Mix</option>
+          <option value="Condensed Milk1">Condensed Milk</option>
+        </select>
+        <label for="crepesCustom">Customization:</label>
+        <input type="text" id="crepesCustom" name="crepesCustom" placeholder="List Toppings Here">
+        <label for="product-qty1">Quantity:</label>
+        <input class="product-qty" id="product-qty1" type="number" name="product-qty" min="0" max="10" value="0" >
+        <br>
+
+        <label for="Waffle">Waffle - $5.50:</label>
+        <select id="Waffle" name="Waffle" data-price="5.50">
+            <option value="toppings2">Toppings</option>
+            <option value="whipped cream2">Whipped Cream</option>
+            <option value="chocolate2">Chocolate Sauce</option>
+            <option value="caramel2">Caramel</option>
+            <option value="Banana2">Banana</option>
+            <option value="Berry Mix2">Berry Mix</option>
+            <option value="Condensed Milk2">Condensed Milk</option>
+        </select>
+        <label for="WaffleCustom">Customization:</label>
+        <input type="text" id="WaffleCustom" name="WaffleCustom" placeholder="List Toppings Here">
+        <label for="product-qty2">Quantity:</label>
+        <input class="product-qty" id="product-qty2" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <label for="minipancakes">Mini Pancakes - $5.50:</label>
+        <select id="minipancakes" name="minipancakes" data-price="5.50">
+            <option value="toppings3">Toppings</option>
+            <option value="whipped cream3">Whipped Cream</option>
+            <option value="chocolate3">Chocolate Sauce</option>
+            <option value="Caramel3">Caramel</option>
+            <option value="Banana3">Banana</option>
+            <option value="Berry Mix3">Berry Mix</option>
+            <option value="Condensed Milk3">Condensed Milk</option>
+        </select>
+        <label for="minipancakesCustom">Customization:</label>
+        <input type="text" id="minipancakesCustom" name="minipancakesCustom" placeholder="List Toppings Here">
+        <label for="product-qty3">Quantity:</label>
+        <input class="product-qty" id="product-qty3" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <label for="croissant">Croissant - $5.50:</label>
+        <select id="croissant" name="croissant" data-price="5.50">
+          <option value="plain4">Plain</option>
+          <option value="chocolate4">Chocolate</option>
+          <option value="almond4">Almond</option>
+        </select>
+        <label for="croissantCustom">Customization:</label>
+        <input type="text" id="croissantCustom" name="croissantCustom" placeholder="e.g., Warm">
+        <label for="product-qty4">Quantity:</label>
+        <input class="product-qty" id="product-qty4" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <label for="bagelwcc">Bagel w/CC - $5.50:</label>
+        <select id="bagelwcc" name="bagelwcc"  data-price="5.50">
+          <option value="Toppings5">Toppings</option>
+          <option value="lox5">Lox</option>
+          <option value="capers5">Capers</option>
+          <option value="avocado5">Avocado</option>
+          <option value="jam5">Seasonal Jam</option>
+          <option value="beefbacon5">Beef Bacon</option>
+          <option value="Nutella5">Nutella</option>
+        </select>
+        <label for="bagelwccCustom">Customization:</label>
+        <input type="text" id="bagelwccCustom" name="bagelwccCustom" placeholder="List Toppings Here">
+        <label for="product-qty5">Quantity:</label>
+        <input class="product-qty" id="product-qty5" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+       <label for="Burrito">BF Burrito - $5.50:</label>
+        <select id="Burrito" name="Burrito" data-price="5.50">
+            <option value="toppings6">Toppings</option>
+            <option value="Eggs6">Eggs</option>
+            <option value="Beans6">Beans</option>
+            <option value="Potatos6">Potatos</option>
+            <option value="Ground Chicken6">Ground Chicken</option>
+            <option value="Pico de Gallo6">Pico de Gallo</option>
+            <option value="Roasted Vegetables6">Roasted Vegetables</option>
+            <option value="Cheese6">Cheese</option>
+            <option value="Guacamole6">Guacamole</option>
+            <option value="Sour Cream6">Sour Cream</option>
+            <option value="Green Salsa6">Green Salsa</option>
+            <option value="Red Salsa6">Red Salsa</option>
+        </select>
+        <label for="BurritoCustom">Customization:</label>
+        <input type="text" id="BurritoCustom" name="BurritoCustom" placeholder="List Toppings Here">
+        <label for="product-qty6">Quantity:</label>
+        <input class="product-qty" id="product-qty6" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <label for="ChickenBiscuit">Chicken Biscuit (2ct) - $5.50:</label>
+        <select id="ChickenBiscuit" name="ChickenBiscuit" data-price="5.50">
+          <option value="No Spice7">No Spice</option>
+          <option value="Mild7">Mild</option>
+          <option value="Medium7">Medium</option>
+          <option value="Hot7">Hot</option>
+          <option value="Too Hot7">Too Hot</option>
+        </select>
+        <label for="ChickenBiscuit">Customization:</label>
+        <input type="text" id="ChickenBiscuit" name="ChickenBiscuit" placeholder="Sauce Amt">
+        <label for="product-qty7">Quantity:</label>
+        <input class="product-qty" id="product-qty7" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+    </div>
+<br>
+
+<button class="collapsible">Lunch <img src="images/200w.gif" width="120px"></button> 
+<div class="menucontent">
+<form method="POST" action="/order" id="orderForm2" class="order-form"></form>
+        <label for="Shawarma">Shawarma - $7.50:</label>
+        <select id="Shawarma" name="Shawarma" data-price="7.50">
+          <option value="Beef8">Beef</option>
+          <option value="Chicken8">Chicken</option>
+          <option value="Falafel8">Falafel</option>
+        </select>
+        <label for="ShawarmaCustom">Customization:</label>
+        <input type="text" id="ShawarmaCustom" name="ShawarmaCustom" placeholder="No Customizations">
+        <label for="product-qty8">Quantity:</label>
+        <input class="product-qty" id="product-qty8" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <label for="Pasta Bowl">Pasta Bowl - $7.50:</label>
+        <select id="Pasta Bowl" name="Pasta Bowl" data-price="7.50">
+          <option value="Spinach9">Plain</option>
+          <option value="Parmesan9">Parmesan</option>
+          <option value="Meatball9">Meatball</option>
+          <option value="Chicken9">Chicken</option>
+          <option value="Peppers9">Peppers</option>
+          <option value="Pesto9">Pesto</option>
+        </select>
+        <label for="PastaBowlCustom">Customization:</label>
+        <input type="text" id="PastaBowlCustom" name="PastaBowlCustom" placeholder="List Toppings Here">
+        <label for="product-qty9">Quantity:</label>
+        <input class="product-qty" id="product-qty9" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <label for="Sandwiches">Deli Style Sandwiches - $7.50:</label>
+        <select id="Sandwiches" name="Sandwiches" data-price="7.50">
+          <option value="Reuben10">Reuben</option>
+          <option value="Turkey10">Turkey</option>
+          <option value="Italian10">Italian</option>
+          <option value="BLT10">BLT</option>
+        </select>
+        <label for="SandwichesCustom">Customization:</label>
+        <input type="text" id="SandwichesCustom" name="SandwichesCustom" placeholder="List Toppings Here">
+        <label for="product-qty10">Quantity:</label>
+        <input class="product-qty" id="product-qty10" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <label for="Soup">Soup of the day - $3.50:</label>
+        <select id="Soup" name="Soup" data-price="3.50">
+          <option value="Cup11">Cup</option>
+          <option value="Bowl11">Bowl</option>
+        </select>
+        <label for="SoupCustom">Customization:</label>
+        <input type="text" id="SoupCustom" name="SoupCustom" placeholder="$3+ for half sandwich or soup">
+        <label for="product-qty11">Quantity:</label>
+        <input class="product-qty" id="product-qty11" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <label for="SaladRice">Salad or Rice Bowl - $7.50:</label>
+        <select id="SaladRice" name="SaladRice" data-price="7.50">
+            <option value="Toppingd12">Toppings</option>
+            <option value="Spinach12">Spinach</option>
+            <option value="Mixed Greens12">Mixed Greens</option>
+            <option value="Parmesan12">Parmesan</option>
+            <option value="Meatball12">Meatball</option>
+            <option value="Chicken12">Chicken</option>
+            <option value="Peppers12">Peppers</option>
+            <option value="Pesto12">Pesto</option>
+            <option value="Tomato12">Tomato</option>
+            <option value="Pickles12">Pickles</option>
+
+        </select>
+        <label for="SaladRiceCustom">Customization:</label>
+        <input type="text" id="SaladRiceCustom" name="SaladRiceCustom" placeholder="List Toppings Here">
+        <label for="product-qty12">Quantity:</label>
+        <input class="product-qty" id="product-qty12" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+       <label for="Burrito13">Burrito or Burrito Bowl - $7.50:</label>
+        <select id="Burrito13" name="Burrito" data-price="7.50">
+            <option value="toppings13">Toppings</option>
+            <option value="Beef13">Beef</option>
+            <option value="Beans13">Beans</option>
+            <option value="Potatos13">Potatos</option>
+            <option value="Ground Chicken13">Ground Chicken</option>
+            <option value="Pico de Gallo13">Pico de Gallo</option>
+            <option value="Roasted Vegetables13">Roasted Vegetables</option>
+            <option value="Cheese13">Cheese</option>
+            <option value="Guacamole13">Guacamole</option>
+            <option value="Sour Cream13">Sour Cream</option>
+            <option value="Green Salsa13">Green Salsa</option>
+            <option value="Red Salsa13">Red Salsa</option>
+        </select>
+        <label for="BurritoCustom">Customization:</label>
+        <input type="text" id="BurritoCustom" name="BurritoCustom" placeholder="List Toppings Here">
+        <label for="product-qty13">Quantity:</label>
+        <input class="product-qty" id="product-qty13" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <label for="Pizza">Personal Pizza- $7.50:</label>
+        <select id="Pizza" name="Pizza"  data-price="7.50">
+          <option value="Cheese14">Plain</option>
+          <option value="Beef Pepporoni14">Chocolate</option>
+          <option value="Veggie14">Veggie</option>
+          <option value="White14">White</option>
+        </select>
+        <label for="PizzaSlice">Customization:</label>
+        <input type="text" id="PizzaSlice" name="PizzaSlice" placeholder="No Customizations">
+        <label for="product-qty14">Quantity:</label>
+        <input class="product-qty" id="product-qty14" type="number" name="product-qty" min="0" max="10" value="0">
+        <br>
+
+        <br>
+</div>
+<br>
+
+<button class="collapsible">Dinner <img src="images/giphy.gif" width="150px"></button>
+<div class="menucontent">
+<form method="POST" action="/order" id="orderForm3" class="order-form"></form>
+            <label for="BanhMi">Banh Mi - $10.50:</label>
+            <select id="BanhMi15" name="BanhMi" data-price="10.50">
+              <option value="Chicken15">Chicken</option>
+              <option value="Beef15">Beef</option>
+            </select>
+            <label for="BanhMiCustom">Customization:</label>
+            <input type="text" id="BanhMiCustom" name="BanhMiCustom" placeholder="Customizations">
+            <label for="product-qty15">Quantity:</label>
+            <input class="product-qty" id="product-qty15" type="number" name="product-qty" min="0" max="10" value="0">
+            <br>
+    
+            <label for="LasagnaSlice">Lasagna Slice - $10.50:</label>
+            <select id="LasagnaSlice" name="LasagnaSlice" data-price="10.50">
+              <option value="Veggie16">Veggie</option>
+              <option value="Meat16">Meat</option>
+            </select>
+            <label for="LasagnaSliceCustom">Customization:</label>
+            <input type="text" id="LasagnaSliceCustom" name="LasagnaSliceCustom" placeholder="Customizations">
+            <label for="product-qty16">Quantity:</label>
+            <input class="product-qty" id="product-qty16" type="number" name="product-qty" min="0" max="10" value="0">
+            <br>
+    
+            <label for="ButterChicken">Butter Chicken - $10.50:</label>
+            <select id="ButterChicken" name="ButterChicken" data-price="10.50">
+              <option value="Naan17">Naan</option>
+              <option value="Rice17">Rice</option>
+            </select>
+            <label for="ButterChickenCustom">Customization:</label>
+            <input type="text" id="ButterChickenCustom" name="ButterChickenCustom" placeholder="Customization">
+            <label for="product-qty17">Quantity:</label>
+            <input class="product-qty" id="product-qty17" type="number" name="product-qty" min="0" max="10" value="0">
+            <br>
+    
+            <label for="MongolianBeef">Mongolian Beef - $10.50:</label>
+            <select id="MongolianBeef" name="MongolianBeef" data-price="10.50">
+              <option value="Fried18">Fried Rice</option>
+              <option value="Steamed18">Steamed Rice</option>
+            </select>
+            <label for="MongolianBeefCustom">Customization:</label>
+            <input type="text" id="MongolianBeefCustom" name="MongolianBeefCustom" placeholder="Customization">
+            <label for="product-qty18">Quantity:</label>
+            <input class="product-qty" id="product-qty18" type="number" name="product-qty" min="0" max="10" value="0">
+            <br>
+    
+            <label for="HotChicken">Hot Chicken Sandwich - $10.50:</label>
+            <select id="HotChicken" name="HotChicken" data-price="10.50">
+              <option value="No Spice19">No Spice</option>
+              <option value="Mild19">Mild</option>
+              <option value="Medium19">Medium</option>
+              <option value="Hot19">Hot</option>
+              <option value="Too Hot19">Too Hot</option>
+            </select>
+            <label for="HotChickenCustom">Customization:</label>
+            <input type="text" id="HotChickenCustom" name="HotChickenCustom" placeholder="On request HC Mac">
+            <label for="product-qty19">Quantity:</label>
+            <input class="product-qty" id="product-qty19" type="number" name="product-qty" min="0" max="10" value="0">
+            <br>
+    
+           <label for="ChoppedCheese">Chopped Cheese - $10.50:</label>
+            <select id="ChoppedCheese" name="ChoppedCheese" data-price="10.50">
+              <option value="regular20">Regular</option>>
+            </select>
+            <label for="ChoppedCheeseCustom">Customization:</label>
+            <input type="text" id="ChoppedCheeseCustom" name="ChoppedCheeseCustom" placeholder="No substitutions">
+            <label for="product-qty20">Quantity:</label>
+            <input class="product-qty" id="product-qty20" type="number" name="product-qty" min="0" max="10" value="0">
+            <br>
+
+            <label for="Wings">Wings (10ct) - $10.50:</label>
+            <select id="Wings" name="Wings" data-price="11.50">
+              <option value="Lemon21">Lemon Pepper</option>
+              <option value="Mustard21">Honey Mustard</option>
+              <option value="Ranch21">Ranch</option>
+              <option value="Teriyaki21">Teriyaki BBQ</option>
+              <option value="Parmesan21">Creamy Parmesan</option>
+              <option value="Chili21">Chili Lime</option>
+            </select>
+            <label for="WingsCustom">Customization:</label>
+            <input type="text" id="WingsCustom" name="WingsCustom" placeholder="Chicken wings or Cauliflower wings">
+            <label for="product-qty21">Quantity:</label>
+            <input class="product-qty" id="product-qty21" type="number" name="product-qty" min="0" max="10" value="0" >
+            <br>
+  <br>
+</div>
+<br>
+<button class="collapsible">Drinks and Dessert <img src="images/dessert.webp" width="150px"></button>
+<div class="menucontent">
+<form method="POST" action="/order" id="orderForm4" class="order-form"></form>
+    <label for="SodaCan">Soda Can - $3.50:</label>
+    <select id="SodaCan" name="SodaCan" data-price="3.50">
+      <option value="Cola22">Cola</option>
+      <option value="Cola Zero22">Cola Zero</option>
+      <option value="Dr.b22">Dr.B</option>
+      <option value="Twist22">Twist</option>
+      <option value="Orange Burst22">Orange Bursto</option>
+      <option value="Wild Red22">Wild Red</option>
+    </select>
+    <label for="SodaCanCustom">Customization:</label>
+    <input type="text" id="SodaCanCustom" name="SodaCanCustom" placeholder="No Customization">
+    <label for="product-qty22">Quantity:</label>
+    <input class="product-qty" id="product-qty22" type="number" name="product-qty" min="0" max="10" value="0">
+    <br>
+
+    <label for="coffee">Latte, Cappucino - $3.50:</label>
+    <select id="coffee" name="coffee"  data-price="3.50">
+      <option value="Whole23">Whole</option>
+      <option value="Soy23">Soy</option>
+      <option value="Almond23">Almond</option>
+      <option value="Oat23">Oat</option>
+    </select>
+    <label for="coffeeCustom">Customization:</label>
+    <input type="text" id="coffeeCustom" name="coffeeCustom" placeholder="Latte/Cappucino and flavor">
+    <label for="product-qty23">Quantity:</label>
+    <input class="product-qty" id="product-qty23" type="number" name="product-qty" min="0" max="10" value="0">
+    <br>
+
+    <label for="Espresso">Espresso Shot (2 ct)- $3.50:</label>
+    <select id="Espresso" name="Espresso" data-price="3.50">
+      <option value="Light24">Light</option>
+      <option value="Medium24">Medium</option>
+      <option value="Dark24">Dark</option>
+    </select>
+    <label for="EspressoCustom">Customization:</label>
+    <input type="text" id="EspressoCustom" name="EspressoCustom" placeholder="Caf or Decaf">
+    <label for="product-qty24">Quantity:</label>
+    <input class="product-qty" id="product-qty24" type="number" name="product-qty" min="0" max="10" value="0">
+    <br>
+
+    <label for="Chai">Doodh Patthi Chai - $3.50:</label>
+    <select id="Chai" name="Chai" data-price="3.50">
+      <option value="Regular25">Regular</option>
+      <option value="Cardamom25">Cardamom</option>
+    </select>
+    <label for="ChaiCustom">Customization:</label>
+    <input type="text" id="ChaiCustom" name="ChaiCustom" placeholder="No Customization">
+    <label for="product-qty25">Quantity:</label>
+    <input class="product-qty" id="product-qty25" type="number" name="product-qty" min="0" max="10" value="0">
+    <br>
+
+    <label for="Cake">Cake Slice - $3.50:</label>
+    <select id="Cake" name="Cake" data-price="3.50">
+      <option value="Carrot26">Carrot</option>
+      <option value="chocolate26">Chocolate</option>
+      <option value="Berry26">Berry</option>
+    </select>
+    <label for="CakeCustom26">Customization:</label>
+    <input type="text" id="CakeCustom" name="CakeCustom" placeholder="No Customization">
+    <label for="product-qty26">Quantity:</label>
+    <input class="product-qty" id="product-qty26" type="number" name="product-qty" min="0" max="10" value="0">
+    <br>
+
+   <label for="icecream">Soft Serve ice cream - $3.50:</label>
+    <select id="icecream" name="icecream" data-price="3.50">
+      <option value="Vanilla27">Vanilla</option>
+      <option value="chocolate27">Chocolate</option>
+      <option value="Swirl27">Swirl</option>
+    </select>
+    <label for="icecreamCustom">Customization:</label>
+    <input type="text" id="icecreamCustom" name="icecreamCustom" placeholder="No Customization">
+    <label for="product-qty">Quantity:</label>
+    <input class="product-qty27" id="product-qty27" type="number" name="product-qty" min="0" max="10" value="0">
+    <br>
+
+    <label for="Lassi">Lassi - $3.50:</label>
+    <select id="Lassi" name="Lassi" data-price="3.50">
+      <option value="plain28">Plain</option>
+      <option value="Mango28">Mango</option>
+    </select>
+    <label for="LassiCustom">Customization:</label>
+    <input type="text" id="LassiCustom" name="LassiCustom" placeholder="No Customization">
+    <label for="product-qty">Quantity:</label>
+    <input class="product-qty28" id="product-qty28" type="number" name="product-qty" min="0" max="10" value="0">
+    <br>
+</div>
+
+
+<form id="contact">
+
+      <h2>Contact Information</h2>
+      <label for="name">Name listed on card:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+      <br>
+    
+
+      <h2>Payment Information</h2>
+      <label for="cardNumber">Card Number:</label>
+      <input type="number" id="cardNumber" name="cardNumber" required>
+
+      <label for="expiry">Expiration Date:</label>
+      <input type="month" id="expiry" name="expiry" placeholder="MM/YY" required>
+
+      <label for="cvv">CVV:</label>
+      <input type="number" id="cvv" name="cvv" required>
+
+
+      
+        <div>Total Price: <span id="totalPrice">$0.00</span></div>
+  
+
+        <button onclick="myFunction()" type="submit" id="submitBtn" disabled>Submit</button>
+
+
+      </form>
+  
+   
+
+  </div>
+  
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+  function calculateTotalPrice() {
+  
+    var totalPrice = 0;
+
+ 
+    var productQtyInputs = document.querySelectorAll(".product-qty");
+    productQtyInputs.forEach(function(input) {
+    
+      var quantity = parseInt(input.value);
+      var price = parseFloat(input.parentNode.querySelector("select").getAttribute("data-price"));
+
+
+      totalPrice += quantity * price;
+    });
+
+    var salesTax = totalPrice * 0.0825;
+    totalPrice += salesTax;
+
+ 
+    var totalPriceSpan = document.getElementById("totalPrice");
+    totalPriceSpan.textContent = "$" + totalPrice.toFixed(2);
+  }
+
+ 
+  var productQtyInputs = document.querySelectorAll(".product-qty");
+  productQtyInputs.forEach(function(input) {
+    input.addEventListener("input", calculateTotalPrice);
+  });
+
+
+  calculateTotalPrice();
+});
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+const form = document.getElementById('contact');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const phoneInput = document.getElementById('phone');
+const cardNumberInput = document.getElementById('cardNumber');
+const expiryInput = document.getElementById('expiry');
+const cvvInput = document.getElementById('cvv');
+const submitBtn = document.getElementById('submitBtn');
+
+
+function checkFormValidity() {
+    const contactInfoValid = nameInput.validity.valid && emailInput.validity.valid && phoneInput.validity.valid;
+    const cardInfoValid = cardNumberInput.validity.valid && expiryInput.validity.valid && cvvInput.validity.valid;
+    if (contactInfoValid && cardInfoValid) {
+        submitBtn.disabled = false;
+    } else {
+        submitBtn.disabled = true;
+    }
+}
+
+nameInput.addEventListener('input', checkFormValidity);
+emailInput.addEventListener('input', checkFormValidity);
+phoneInput.addEventListener('input', checkFormValidity);
+cardNumberInput.addEventListener('input', checkFormValidity);
+expiryInput.addEventListener('input', checkFormValidity);
+cvvInput.addEventListener('input', checkFormValidity);
+
+
+form.addEventListener('submit', function(event) {
+    if (!nameInput.validity.valid || !emailInput.validity.valid || !phoneInput.validity.valid ||
+        !cardNumberInput.validity.valid || !expiryInput.validity.valid || !cvvInput.validity.valid) {
+        event.preventDefault();
+        console.log('Please fill out all required fields.');
+    }
+});
+function myFunction() {
+  alert("Thank you for placing your order!");
+}
+
+</script>
+</body>
+</html>

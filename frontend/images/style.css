@@ -1,0 +1,195 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font: 12px;
+	font-size: 18px;
+	color: #eff6ff;
+	background: #b11313;
+	
+}
+*
+{
+  margin: 0 auto 0 auto;
+ text-align:left;}
+
+#container
+{
+  display: block; 
+  height:auto;
+  position: relative; 
+  width: 960px;
+}
+
+
+#header
+{
+height:85px;
+width:960px;	
+}
+
+#header h1
+{
+position:absolute;
+text-align:center;
+color:#FFFFFF;
+font-size:60px;
+color:#FFF;	
+left:14px;
+top:18px;
+}
+
+
+#header h2
+{
+position:left;
+text-align:right;
+color:#4c0c0c;
+left:490px;
+top:38px;
+width:400px;
+}
+
+
+
+
+.off
+{
+color:rgb(53, 14, 14);
+}
+
+
+#menu
+{
+background-color: #4c0c0c;
+display:block;
+float:left;
+clear:both;
+width:960px;
+height:54px;
+float:left;
+clear:both;
+}
+.active, #menu a:hover {
+	background-color: #7c0e0e;
+  }
+
+
+#leftmenu
+{
+margin-top:15px;
+width:404px;
+float:left;
+}
+
+#leftmenu_main
+{
+width:404px;
+height:auto;
+background-color:#420000;
+}
+
+#leftmenu_main ul
+{
+list-style: none;
+padding: 0px;
+width:404px;
+}
+
+
+#leftmenu_main h3
+{
+list-style: none;
+padding: 0px;
+width:404px;
+color:#FFFFFF;
+padding-left:10px;
+padding-bottom:14px;
+}
+
+#content
+{
+display:block;
+float:right;
+width:489px;
+height:auto;
+padding-left:20px;
+padding-top:20px;
+padding-right:10px;
+padding-bottom:5px;
+}
+
+
+#menu ul {
+	list-style: none;
+	padding: 0px;
+	margin-left:auto;
+	width:960px;
+}
+
+#menu li {
+	list-style: none;
+	padding: 0px;	
+	display: inline; 
+	
+}
+
+#menu a {
+	float: left;
+	height: 36px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 18px;
+	font-size: auto;
+	padding-left:13px;
+	padding-right:13px;
+	
+}
+
+
+
+html, body {
+text-align: center;
+}
+p {text-align: left;}
+
+.collapsible {
+	background-color: #cc8d8d;
+	font-family: 'Times New Roman', Times, serif;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 60px;
+  }
+  
+  .active, .collapsible:hover {
+	background-color: #953737;
+  }
+  
+  .collapsible:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+  }
+  
+  .active:after {
+	content: "\2212";
+  }
+  
+  .menucontent {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	padding: 0 18px;
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #620b0b;
+  }

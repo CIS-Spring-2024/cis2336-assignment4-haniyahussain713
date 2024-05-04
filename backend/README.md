@@ -6,11 +6,11 @@ Installation
 
 1.  Clone this repository:
     ```bash
-    git clone [https://github.com/](https://github.com/)[your-username]/uhsl-cafe-ordering.git
+    git clone [https://github.com/CIS-Spring-2024/assign4_Syeda-Hussain-19387.git]
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd uhsl-cafe-ordering
+    cd assign4_Syeda-Hussain-19387
     ```
 3.  Install dependencies:
     ```bash
